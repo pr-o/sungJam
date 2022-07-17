@@ -24,7 +24,12 @@ config :sungJam, SungJamWeb.Endpoint,
   code_reloader: true,
   debug_errors: true,
   secret_key_base: "CRCFm32XiZr98nn0s2zbpB2DEjKBKhUiwUSJ/RjBRF3SyL4tPtCL7YwG5KlpVhgR",
-  watchers: []
+  watchers: [
+    node: [
+      "node_modules/vite/bin/vite.js",
+      cd: Path.expand("../assets", __DIR__)
+    ]
+  ]
 
 # ## SSL Support
 #
